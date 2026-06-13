@@ -7,9 +7,9 @@
 <meta name="description" content="Tall. White. Benevolent. Deleted from the timeline, alive on-chain. The Pleiadians community takeover on Solana." />
 <meta property="og:title" content="PLEIADIANS — The Tall White" />
 <meta property="og:description" content="Tall. White. Benevolent. They walk among us — now they ascend on-chain." />
-<meta property="og:image" content="assets/banner.png" />
+<meta property="og:image" content="assets/banner.webp" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/png" href="assets/pfp.png" />
+<link rel="icon" type="image/webp" href="assets/pfp.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -96,6 +96,17 @@
   .scrollcue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s var(--ease) infinite}
   @keyframes cue{0%{opacity:0;transform:scaleY(.3)}40%{opacity:1}100%{opacity:0;transform:translateY(20px) scaleY(.3)}}
 
+  /* STATS + CONTRACT */
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--hair)}
+  .stat{padding:30px 20px;text-align:center;border-right:1px solid var(--hair);display:flex;flex-direction:column;gap:8px}
+  .stat:last-child{border-right:none}
+  .stat .sv{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3.4vw,40px);color:var(--ink);line-height:1;letter-spacing:.01em}
+  .stat .sv.up{color:#5fbf8f}.stat .sv.down{color:#d9606e}
+  .stat .sl{font:600 10.5px/1 'Inter';letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+  .live{display:inline-flex;align-items:center;gap:7px;font:600 10px/1 'Inter';letter-spacing:.24em;text-transform:uppercase;color:var(--gold);justify-content:center;padding:14px 0 0}
+  .live .dot{width:6px;height:6px;border-radius:50%;background:#5fbf8f;box-shadow:0 0 8px #5fbf8f;animation:blink 2s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  @media(max-width:680px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--hair)}}
   /* CONTRACT */
   .ca{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--bg-2)}
   .ca-in{display:flex;align-items:center;justify-content:center;gap:20px;padding:26px 32px;flex-wrap:wrap}
@@ -199,7 +210,7 @@
 
 <nav id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top"><img src="assets/pfp.png" alt="Pleiadians"><b>PLEIADIANS</b></a>
+    <a class="brand" href="#top"><img src="assets/pfp.webp" alt="Pleiadians"><b>PLEIADIANS</b></a>
     <div class="nav-links">
       <a href="#legend">Legend</a>
       <a href="#catalyst">Catalyst</a>
@@ -213,7 +224,7 @@
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="hero-img"><img src="assets/banner.png" alt="The Pleiadian city"></div>
+  <div class="hero-img"><img src="assets/banner.webp" alt="The Pleiadian city"></div>
   <div class="wrap hero-in">
     <span class="kicker reveal in">The Tall White</span>
     <h1 class="reveal in d1">PLEIADIANS</h1>
@@ -227,8 +238,15 @@
   <div class="scrollcue">Scroll</div>
 </header>
 
-<!-- CONTRACT -->
-<div class="ca">
+<!-- LIVE STATS + CONTRACT -->
+<div class="ca" id="stats">
+  <div class="stats-grid">
+    <div class="stat"><span class="sv" id="st-mc">—</span><span class="sl">Market Cap</span></div>
+    <div class="stat"><span class="sv" id="st-price">—</span><span class="sl">Price</span></div>
+    <div class="stat"><span class="sv" id="st-24h">—</span><span class="sl">24h Change</span></div>
+    <div class="stat"><span class="sv" id="st-liq">—</span><span class="sl">Liquidity</span></div>
+  </div>
+  <div class="live"><span class="dot"></span> Live · Dexscreener</div>
   <div class="ca-in">
     <span class="lab">Contract · Solana</span>
     <code id="ca">5Wy5M14iHCAWryfM2qEhkUtps9YHNYoi2qFjfqXdpump</code>
@@ -246,7 +264,7 @@
       <p>In the wider contact mythology they became the <strong>Pleiadians</strong> — the Nordic star-people of the Pleiades cluster: fair, towering, benevolent, watching over Earth and whispering of ascension. That is the archetype we carry. Tall. White. Benevolent. Ascend with us.</p>
     </div>
     <div class="media reveal d1">
-      <img src="assets/p3.png" alt="The Pleiadian council beneath the morning star">
+      <img src="assets/p3.webp" alt="The Pleiadian council beneath the morning star">
       <span class="frame"></span>
     </div>
   </div>
@@ -254,7 +272,7 @@
 
 <!-- CINEMATIC QUOTE -->
 <div class="cine center dark reveal">
-  <div class="bg"><img src="assets/p1.png" alt="The valley of the star-people"></div>
+  <div class="bg"><img src="assets/p1.webp" alt="The valley of the star-people"></div>
   <div class="wrap"><div class="c">
     <p class="quote serif">"They came in peace.<br>They stayed in light.<br>Now they rise on-chain."</p>
     <span class="by">The Pleiadian Creed</span>
@@ -265,7 +283,7 @@
 <section id="catalyst" style="padding-bottom:90px">
   <div class="wrap split rev">
     <div class="media reveal">
-      <img src="assets/hero-oval-office.png" alt="The Tall Whites in the Oval Office">
+      <img src="assets/hero-oval-office.webp" alt="The Tall Whites in the Oval Office">
       <span class="frame"></span>
     </div>
     <div class="reveal d1">
@@ -280,7 +298,7 @@
 
 <!-- THEY WALK AMONG US (full-bleed) -->
 <div class="cine left reveal">
-  <div class="bg"><img src="assets/highrise.png" alt="A Pleiadian watching over the modern city"></div>
+  <div class="bg"><img src="assets/highrise.webp" alt="A Pleiadian watching over the modern city"></div>
   <div class="wrap"><div class="c">
     <span class="kicker">Among Us</span>
     <h2 class="head-lg" style="margin:24px 0 16px">Hidden in plain sight.</h2>
@@ -361,7 +379,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <a class="brand" href="#top"><img src="assets/pfp.png" alt="Pleiadians"><b style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;letter-spacing:.2em">PLEIADIANS</b></a>
+      <a class="brand" href="#top"><img src="assets/pfp.webp" alt="Pleiadians"><b style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;letter-spacing:.2em">PLEIADIANS</b></a>
       <div class="foot-links">
         <a href="https://x.com/thetallwhite" target="_blank" rel="noopener">X / Twitter</a>
         <a href="https://x.com/i/communities/1976498212337852904" target="_blank" rel="noopener">Community</a>
@@ -384,6 +402,30 @@
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.16,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+
+  // live stats from Dexscreener
+  const PAIR='4xd8a6kgoxuogqbm4rxsmp9gpqbqejvjco4bbwjny1ab';
+  const fmtUsd=n=>{n=Number(n);if(!isFinite(n))return'—';
+    if(n>=1e9)return'$'+(n/1e9).toFixed(2)+'B';
+    if(n>=1e6)return'$'+(n/1e6).toFixed(2)+'M';
+    if(n>=1e3)return'$'+(n/1e3).toFixed(1)+'K';
+    return'$'+n.toFixed(0);};
+  const fmtPrice=v=>{v=Number(v);if(!isFinite(v)||v<=0)return'—';return v>=1?'$'+v.toFixed(3):'$'+v.toPrecision(3);};
+  async function loadStats(){
+    try{
+      const r=await fetch('https://api.dexscreener.com/latest/dex/pairs/solana/'+PAIR,{cache:'no-store'});
+      const j=await r.json();
+      const p=(j.pairs&&j.pairs[0])||j.pair;if(!p)return;
+      const set=(id,v)=>{const e=document.getElementById(id);if(e&&v)e.textContent=v;};
+      set('st-mc',fmtUsd(p.marketCap||p.fdv));
+      set('st-price',fmtPrice(p.priceUsd));
+      set('st-liq',fmtUsd(p.liquidity&&p.liquidity.usd));
+      const ch=p.priceChange&&p.priceChange.h24;
+      const e=document.getElementById('st-24h');
+      if(e&&ch!=null){e.textContent=(ch>=0?'+':'')+Number(ch).toFixed(1)+'%';e.classList.remove('up','down');e.classList.add(ch>=0?'up':'down');}
+    }catch(err){}
+  }
+  loadStats();setInterval(loadStats,30000);
 
   function copyCA(){
     const t=document.getElementById('ca').textContent.trim();
