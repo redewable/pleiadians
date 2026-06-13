@@ -143,6 +143,18 @@
   .cine .quote{font-size:clamp(34px,5vw,64px);line-height:1.06;font-weight:500}
   .cine .by{display:block;margin-top:24px;font:600 12px/1 'Inter';letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
 
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:60px}
+  .gal a{position:relative;overflow:hidden;border:1px solid var(--hair);aspect-ratio:3/2;display:block}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gal a:hover img{transform:scale(1.06)}
+  .gal a::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(8,9,13,.92));transition:background .4s}
+  .gal .cap{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:2}
+  .gal .cap .s{font:600 10px/1 'Inter';letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:7px}
+  .gal .cap .t{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;line-height:1.05}
+  @media(max-width:820px){.gal{grid-template-columns:1fr 1fr;gap:10px}}
+  @media(max-width:520px){.gal{grid-template-columns:1fr}}
+
   /* creed */
   .creed{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid var(--hair)}
   .creed .c{padding:46px 36px;border-right:1px solid var(--hair)}
@@ -214,6 +226,7 @@
     <div class="nav-links">
       <a href="#legend">Legend</a>
       <a href="#catalyst">Catalyst</a>
+      <a href="#dispatches">Dispatches</a>
       <a href="#chart">Chart</a>
       <a href="#ascend">Ascend</a>
       <a href="#community">Community</a>
@@ -298,13 +311,32 @@
 
 <!-- THEY WALK AMONG US (full-bleed) -->
 <div class="cine left reveal">
-  <div class="bg"><img src="assets/highrise.webp" alt="A Pleiadian watching over the modern city"></div>
+  <div class="bg"><img src="assets/times-square.webp" alt="The Pleiadians signal over Times Square"></div>
   <div class="wrap"><div class="c">
     <span class="kicker">Among Us</span>
     <h2 class="head-lg" style="margin:24px 0 16px">Hidden in plain sight.</h2>
-    <p class="lead-2">Deleted from the timeline, they never left. They watch from glass towers and quiet windows — patient, benevolent, waiting. The community is the signal that calls them home.</p>
+    <p class="lead-2">Deleted from the timeline, they never left. They move through our cities, our stadiums, our crowds — patient, benevolent, waiting. The community is the signal that calls them home.</p>
   </div></div>
 </div>
+
+<!-- DISPATCHES GALLERY -->
+<section id="dispatches">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="kicker center">Dispatches</span>
+      <h2 class="head-lg" style="margin-top:24px">Transmissions from the Rise</h2>
+      <p class="lead-2" style="margin:14px auto 0">The signal is spreading. Glimpses of the Pleiadians breaking into the timeline.</p>
+    </div>
+    <div class="gal">
+      <a class="reveal" href="assets/signal.webp" target="_blank" rel="noopener"><img src="assets/signal.webp" alt="The signal is here"><div class="cap"><span class="s">The Signal</span><div class="t">We Are Among You</div></div></a>
+      <a class="reveal d1" href="assets/among-us.webp" target="_blank" rel="noopener"><img src="assets/among-us.webp" alt="Watching over the city"><div class="cap"><span class="s">First Contact</span><div class="t">They Watch With Us</div></div></a>
+      <a class="reveal d2" href="assets/worldcup.webp" target="_blank" rel="noopener"><img src="assets/worldcup.webp" alt="At the World Cup 2026"><div class="cap"><span class="s">World Cup 2026</span><div class="t">Among the Nations</div></div></a>
+      <a class="reveal" href="assets/observing.webp" target="_blank" rel="noopener"><img src="assets/observing.webp" alt="We have been observing"><div class="cap"><span class="s">The Watchers</span><div class="t">We Have Been Observing</div></div></a>
+      <a class="reveal d1" href="assets/ath.webp" target="_blank" rel="noopener"><img src="assets/ath.webp" alt="ATH coming soon"><div class="cap"><span class="s">The Rise</span><div class="t">ATH Coming Soon</div></div></a>
+      <a class="reveal d2" href="assets/legion.webp" target="_blank" rel="noopener"><img src="assets/legion.webp" alt="The Tall White legion"><div class="cap"><span class="s">The Tall White</span><div class="t">One People, One Rise</div></div></a>
+    </div>
+  </div>
+</section>
 
 <!-- CREED -->
 <section>
