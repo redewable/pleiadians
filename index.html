@@ -103,7 +103,7 @@
   .stat .sv{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3.4vw,40px);color:var(--ink);line-height:1;letter-spacing:.01em}
   .stat .sv.up{color:#5fbf8f}.stat .sv.down{color:#d9606e}
   .stat .sl{font:600 10.5px/1 'Inter';letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-  .live{display:inline-flex;align-items:center;gap:7px;font:600 10px/1 'Inter';letter-spacing:.24em;text-transform:uppercase;color:var(--gold);justify-content:center;padding:14px 0 0}
+  .live{display:flex;align-items:center;justify-content:center;gap:7px;font:600 10px/1 'Inter';letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:16px 0 2px}
   .live .dot{width:6px;height:6px;border-radius:50%;background:#5fbf8f;box-shadow:0 0 8px #5fbf8f;animation:blink 2s infinite}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
   @media(max-width:680px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--hair)}}
@@ -194,8 +194,13 @@
   .foot-links{display:flex;gap:30px}
   .foot-links a{color:var(--muted);font:500 14px/1 'Inter';transition:color .3s}
   .foot-links a:hover{color:var(--gold-2)}
+  .foot-links a svg{width:16px;height:16px;fill:currentColor;display:block}
   .disc{color:var(--muted);font-size:12.5px;line-height:1.75;opacity:.72;max-width:840px;margin:40px auto 0;text-align:center}
   .copy{text-align:center;color:var(--muted);font-size:12px;opacity:.5;margin-top:26px;letter-spacing:.04em}
+  .credit{text-align:center;color:var(--muted);font-size:13px;margin-top:34px;display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+  .credit a{color:var(--gold-2);display:inline-flex;align-items:center;gap:7px;transition:color .3s}
+  .credit a:hover{color:var(--gold)}
+  .credit svg{width:14px;height:14px;fill:currentColor;display:block}
 
   /* mobile */
   @media(max-width:680px){
@@ -304,7 +309,6 @@
       <h2 class="head-lg" style="margin-top:26px">"Who are these guys?"</h2>
       <p>Mid-June 2026, an image tore across the timeline: the President of the United States, seated in the Oval Office, flanked by impossibly tall, platinum-blonde figures robed in crimson and gold. The internet erupted. Pleiadians? Tall Whites? Nordics? The question trended for days.</p>
       <p>The lore had its moment — and the people seized it. <strong>They walk among us. Now they're on-chain.</strong> The Pleiadians community takeover was born from that single, electric frame.</p>
-      <p style="font-size:13px;opacity:.65;margin-top:24px">For the record: the viral image is AI-generated and depicts no real meeting. This is a meme-culture community token — narrative, not news.</p>
     </div>
   </div>
 </section>
@@ -359,10 +363,10 @@
     <div class="reveal" style="text-align:center;margin-bottom:50px">
       <span class="kicker center">Live Market</span>
       <h2 class="head-lg" style="margin-top:24px">The Ascension, Charted</h2>
-      <p class="lead-2" style="margin:14px auto 0">Real-time price, liquidity, and volume — straight from Dexscreener.</p>
+      <p class="lead-2" style="margin:14px auto 0">Real-time price, volume, and liquidity — live on-chain.</p>
     </div>
     <div class="chart reveal d1">
-      <iframe src="https://dexscreener.com/solana/4xd8a6kgoxuogqbm4rxsmp9gpqbqejvjco4bbwjny1ab?embed=1&theme=dark&trades=0&info=0" loading="lazy" title="PLEIADIANS live chart"></iframe>
+      <iframe src="https://www.geckoterminal.com/solana/pools/4xd8A6kGoXuoGQBm4RXSmp9gpqBQeJvjco4bbwJnY1Ab?embed=1&info=0&swaps=0&grayscale=0&light_chart=0" loading="lazy" allow="clipboard-write" title="PLEIADIANS live chart"></iframe>
     </div>
     <div style="text-align:center;margin-top:24px" class="reveal d1">
       <a class="btn btn-line" href="https://dexscreener.com/solana/4xd8a6kgoxuogqbm4rxsmp9gpqbqejvjco4bbwjny1ab" target="_blank" rel="noopener">Open full chart <span class="arw">→</span></a>
@@ -413,12 +417,17 @@
     <div class="foot-top">
       <a class="brand" href="#top"><img src="assets/pfp.webp" alt="Pleiadians"><b style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;letter-spacing:.2em">PLEIADIANS</b></a>
       <div class="foot-links">
-        <a href="https://x.com/thetallwhite" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://x.com/thetallwhite" target="_blank" rel="noopener" aria-label="The Tall White on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
         <a href="https://x.com/i/communities/1976498212337852904" target="_blank" rel="noopener">Community</a>
         <a href="https://dexscreener.com/solana/4xd8a6kgoxuogqbm4rxsmp9gpqbqejvjco4bbwjny1ab" target="_blank" rel="noopener">Dexscreener</a>
       </div>
     </div>
     <p class="disc">$PLEIADIANS is a community-driven meme token with no intrinsic value, no roadmap promises, and no expectation of financial return. It is not affiliated with, endorsed by, or connected to any government, public official, or any real or claimed extraterrestrial entity. All imagery is artistic and AI-generated. Crypto is volatile and high-risk — never invest more than you can afford to lose. Do your own research.</p>
+    <p class="credit">Site built &amp; developed by TB
+      <a href="https://x.com/nmbrzonascreen" target="_blank" rel="noopener" aria-label="@nmbrzonascreen on X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @nmbrzonascreen</a>
+    </p>
     <p class="copy">© 2026 The Tall White · Tall. White. Benevolent.</p>
   </div>
 </footer>
