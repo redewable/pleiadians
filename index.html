@@ -91,10 +91,6 @@
   .hero .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--gold-2);font-weight:500}
   .hero .lead{max-width:520px;color:var(--muted);margin:24px 0 34px;font-size:17px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;
-    font:600 11px/1 'Inter';letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:12px}
-  .scrollcue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s var(--ease) infinite}
-  @keyframes cue{0%{opacity:0;transform:scaleY(.3)}40%{opacity:1}100%{opacity:0;transform:translateY(20px) scaleY(.3)}}
 
   /* STATS + CONTRACT */
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--hair)}
@@ -217,9 +213,18 @@
     .hero-img img{object-position:62% center}
     .hero-cta{flex-direction:column;align-items:stretch}
     .hero-cta .btn{justify-content:center}
-    .scrollcue{display:none}
-    .cine{height:auto;min-height:0;padding:96px 0}
+    .cine{height:auto;min-height:0;padding:84px 0}
     .ca code{font-size:12px}
+    .hero-img::after{background:linear-gradient(180deg,rgba(8,9,13,.62) 0%,rgba(8,9,13,.34) 26%,rgba(8,9,13,.72) 68%,rgba(8,9,13,.97) 100%)}
+    .stat{padding:22px 12px;gap:6px}
+    .stat .sv{font-size:27px}
+    .live{padding:14px 0 2px}
+    .chart iframe{height:440px}
+    .head-xl{font-size:clamp(40px,11vw,60px)}
+    .cine .quote{font-size:clamp(28px,8vw,44px)}
+    .lk{padding:30px 26px}
+    .gal .cap{padding:18px}
+    .foot-top{flex-direction:column;align-items:flex-start;gap:22px}
   }
 </style>
 </head>
@@ -253,7 +258,6 @@
       <a class="btn btn-line" href="https://x.com/thetallwhite" target="_blank" rel="noopener">Follow @thetallwhite</a>
     </div>
   </div>
-  <div class="scrollcue">Scroll</div>
 </header>
 
 <!-- LIVE STATS + CONTRACT -->
